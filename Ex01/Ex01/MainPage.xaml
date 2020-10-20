@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Choose a board"
+             x:Class="Ex01.MainPage">
+
+    <ListView x:Name="lvwBoards" ItemSelected="lvwBoards_ItemSelected" SeparatorColor="White" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="45" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Frame CornerRadius="7" Margin="8" BackgroundColor='{Binding ColorHex}' />
+                        <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="Center" />
+                    </Grid>
+                </ViewCell>
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
